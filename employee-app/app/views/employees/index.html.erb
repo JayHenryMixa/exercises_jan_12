@@ -1,0 +1,10 @@
+<h1> Index of Employees </h1>
+
+<% @employees.each do |employee| %>
+  <h2><%= employee.last_name %></h2>
+  <h2><%= employee.first_name %></h2>
+  <h2><%= employee.job_title %></h2>
+  <h2><%= employee.salary %></h2>
+  <h2><%= employee.phone_number %></h2>
+  <h2><%= employee.gender %></h2> 
+<% end %>

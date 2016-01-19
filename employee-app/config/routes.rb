@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
 
-  get '/' => 'employees#worker'
+  get '/' => 'employees#index'
+  get '/employees' => 'employees#index'
 
-  get '/all' => 'employees#every_worker'
+  get '/employees/new' => 'employees#new'
+  post '/employees' => 'employees#create'
 
+  get '/employees/:id' => 'employees#show'
+
+  get '/employees/:id/edit' => 'employees#edit'
+  patch '/employees/:id' => 'employees#update'
+
+  delete '/employees/:id' => 'recipes#destroy'
 end
