@@ -20,6 +20,8 @@ class EmployeesController < ApplicationController
       phone_number: params[:phone_number],
       gender: params[:gender]
       })
+
+    flash[:success] = "New Employee Profile Created"
   end
 
   def edit
@@ -36,12 +38,17 @@ class EmployeesController < ApplicationController
       phone_number: params[:phone_number],
       gender: params[:gender]
       })
+    
+    flash[:success] = "Employee Information Updated"
+    redirect_to "/employees/#{@employee.id}"
+
     end
 
   def destroy
     @recipe = Recipe.find(params[:id])  
     @recipe.destroy
 
+    redirect_to "/"
   end
 
 

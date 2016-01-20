@@ -1,7 +1,7 @@
 <h1> Index of Employees </h1>
 
 <% @employees.each do |employee| %>
-  <h2><%= employee.last_name %></h2>
+  <h2><a href="/employees/<%= employee.id %>"><%= employee.last_name %></a></h2>
   <h2><%= employee.first_name %></h2>
   <h2><%= employee.job_title %></h2>
   <h2><%= employee.salary %></h2>

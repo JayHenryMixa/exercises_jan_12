@@ -1,6 +1,12 @@
-  <h2><%= @employee.last_name %></h2>
+  
+  <h4> Updated on: <%= @employee.friendly_update_at %></h4>
+
+  <h2><a href="/"><%= @employee.last_name %></a></h2>
   <h2><%= @employee.first_name %></h2>
   <h2><%= @employee.job_title %></h2>
   <h2><%= @employee.salary %></h2>
   <h2><%= @employee.phone_number %></h2>
   <h2><%= @employee.gender %></h2> 
+
+
+  
